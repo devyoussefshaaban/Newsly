@@ -1,11 +1,11 @@
-import { StyleSheet, Text, TouchableWithoutFeedback, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import styles from "./styles";
 
 const BasicButton = ({ text }: { text: string }) => {
   return (
     <View style={styles.buttonContainer}>
-      <TouchableWithoutFeedback>
+      <TouchableOpacity>
         <Text
           style={{
             color: "#fff",
@@ -14,7 +14,7 @@ const BasicButton = ({ text }: { text: string }) => {
         >
           {text}
         </Text>
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
     </View>
   );
 };
