@@ -2,10 +2,11 @@ import { StyleSheet } from "react-native";
 import React from "react";
 import { Stack } from "expo-router";
 import { Header } from "@/components";
+import { NewsContextProvider } from "@/context/newsContext";
 
 const MainLayout = () => {
   return (
-    <>
+    <NewsContextProvider>
       <Header />
       <Stack
         screenOptions={{
@@ -15,7 +16,7 @@ const MainLayout = () => {
         <Stack.Screen name="home/index" options={{ title: "Home" }} />
         <Stack.Screen name="about/index" options={{ title: "About" }} />
       </Stack>
-    </>
+    </NewsContextProvider>
   );
 };
 
